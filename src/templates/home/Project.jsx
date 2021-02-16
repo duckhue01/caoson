@@ -6,11 +6,11 @@ import Button from "../../components/Button";
 
 
 // images 
-import proj01 from "../../assets/images/home/proj01.webp";
-import proj02 from "../../assets/images/home/proj02.webp";
-import proj03 from "../../assets/images/home/proj03.webp";
-import proj04 from "../../assets/images/home/proj04.webp";
-import proj05 from "../../assets/images/home/proj05.webp";
+import proj01 from "../../assets/images/home/proj01.jpg";
+import proj02 from "../../assets/images/home/proj02.jpg";
+import proj03 from "../../assets/images/home/proj03.jpg";
+import proj04 from "../../assets/images/home/proj04.jpg";
+import proj05 from "../../assets/images/home/proj05.jpg";
 
 
 function Project() {

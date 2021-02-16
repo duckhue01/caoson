@@ -2,7 +2,7 @@ import React from 'react'
 
 
 // images 
-import aboutImg from "../../assets/images/about.webp";
+import aboutImg from "../../assets/images/about.jpg";
 const About = () => {
     return (
         <div>

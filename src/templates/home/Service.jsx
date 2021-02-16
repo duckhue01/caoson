@@ -3,7 +3,7 @@ import  Button  from "../../components/Button";
 import classNames from "classnames";
 
 // images 
-import serImg from "../../assets/images/service.webp";
+import serImg from "../../assets/images/service.jpg";
 
 
 

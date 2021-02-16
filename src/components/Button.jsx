@@ -22,19 +22,4 @@ function Button({name, className}) {
     )
 }
 
-// function ButtonBorder({name, more}) {
-//     return(
-//         <div className={
-//             classNames(
-//                 "h-10 w-24 text-center leading-10 cursor-pointer border",
-//                 more
-//             )
-//         }>
-//             {name}
-//         </div>
-//     )
-// }
-
-
-
-export {Button};
+export default Button;

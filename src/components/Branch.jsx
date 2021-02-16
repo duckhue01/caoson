@@ -12,4 +12,4 @@ function Branch({branch, className}) {
     )
 }
 
-export { Branch }
+export default Branch 

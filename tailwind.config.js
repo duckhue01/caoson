@@ -26,6 +26,10 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      extend01: "#262626",
+      extend02: "#9a8a78"
+
+
     },
     spacing: {
       px: '1px',
@@ -191,6 +195,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      extend01: 'Quicksand, sans-serif',   
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

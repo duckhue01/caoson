@@ -4,36 +4,42 @@ import { AiOutlineHeart } from "react-icons/ai";
 
 function Footer() {
     return (
-        <div className="h-screen border text-center">
-        
-            <div>Lien He</div>
-            <div>
-                <HomeIcon className="mx-auto"/>
+        <div className=" bg-extend01 text-center border-t border-extend02 relative bottom-0">
+            <div className="p-10 border text-extend02 font-extend01 pb-20">
+                <div className="text-3xl py-4">Lien He Chung Toi</div>
                 <div>
-                    259 Me Linh, Vinh Yen, Vinh Phuc
+                    <HomeIcon className="mx-auto mt-5 mb-3"/>
+                    <div>
+                        259 Me Linh, Vinh Yen, Vinh Phuc
+                    </div>
                 </div>
-            </div>
-            <div>
-                <EmailIcon className="mx-auto"/>
                 <div>
-                    example@gmail.com
+                    <EmailIcon className="mx-auto mt-5 mb-3"/>
+                    <div>
+                        example@gmail.com
+                    </div>
                 </div>
-            </div>
-            <div>
-                <PhoneIcon className="mx-auto"/>
                 <div>
-                    0981 565 134 - 039 267 2011
-                </div>
-            </div>     
+                    <PhoneIcon className="mx-auto mt-5 mb-3"/>
+                    <div>
+                        0981 565 134 - 039 267 2011
+                    </div>
+                </div>     
 
-            <div className=" border w-9/12 mx-auto flex">
-                Is made with <AiOutlineHeart size={20} className="mx-1"/>by <a href="https://www.facebook.com/duckhue01/"><b>&ensp;duckhue01.</b> </a>
-            </div>        
-            
-            
+                    
+
+            </div>
+            <div className=" border boder-extend02 w-screen h-10  bottom-0 text-extend02 font-extend01 text-lg ">
+                    
+                <p
+                    className="flex left-1/2  w-72 relative transform -translate-x-1/2 tracking-wide"
+                >Is made with <AiOutlineHeart size={24} className="mx-1"/>by <a href="https://www.facebook.com/duckhue01/"><b>&ensp;duckhue01....  </b> </a></p>
+            </div>   
+                      
         </div>
     )
 }
+
 
 function HomeIcon({className}) {
     return(

@@ -15,13 +15,18 @@ import proj05 from "../../assets/images/home/proj05.jpg";
 
 function Project() {
     return (
-        <div className="h-auto w-screen ">
-            <img src={proj01} className=" w-11/12 h-auto mx-auto border"/>
-            <img src={proj02} className=" w-11/12 h-auto mx-auto border"/>
-            <img src={proj03} className=" w-11/12 h-auto mx-auto border"/>
-            <img src={proj04} className=" w-11/12 h-auto mx-auto border"/>
-            <img src={proj05} className=" w-11/12 h-auto mx-auto border"/>
-            <Button name='View all' className=" border border-black w-11/12 mx-auto "/>
+        <div className="w-screen bg-extend01 ">
+            <div className="p-10 border-t border-extend02">
+                <div className="text-3xl text-white py-4"> Du An Gan Day</div>
+                <img src={proj01} className="w-full h-auto mx-auto my-5 border border-extend02"/>
+                <img src={proj02} className="w-full h-auto mx-auto my-5 border border-extend02"/>
+                <img src={proj03} className="w-full h-auto mx-auto my-5 border border-extend02"/>
+                <img src={proj04} className="w-full h-auto mx-auto my-5 border border-extend02"/>
+                <img src={proj05} className="w-full h-auto mx-auto my-5 border border-extend02"/>
+                <Button name='VIEW ALL' className=" bg-extend02 w-full mx-auto text-white "/>
+            </div>
+            
+            
 
         </div>
     )

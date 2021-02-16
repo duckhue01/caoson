@@ -18,11 +18,14 @@ const Home = ()=> {
     return(
         
         <div>
+        
             <Main/>
             <Service/>
             <About/> 
             <Project/>     
-            <Footer/>     
+            <Footer/>
+        
+               
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import { AiOutlineHeart } from "react-icons/ai";
 
-function Contact() {
+function Footer() {
     return (
         <div className="h-screen border text-center">
         
@@ -86,4 +86,4 @@ function PhoneIcon({className}) {
     )
 }
 
-export default Contact
+export default Footer

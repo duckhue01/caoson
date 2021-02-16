@@ -8,7 +8,7 @@ import Main from "../../templates/home/Main";
 import Service from "../../templates/home/Service";
 import About from "../../templates/home/About";
 import Project from "../../templates/home/Project";
-import Contact from "../../templates/home/Contact";
+import Footer from "../../templates/Footer";
 
 
 
@@ -22,7 +22,7 @@ const Home = ()=> {
             <Service/>
             <About/> 
             <Project/>     
-            <Contact/>     
+            <Footer/>     
         </div>
     )
 }

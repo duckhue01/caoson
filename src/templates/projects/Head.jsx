@@ -31,10 +31,8 @@ const Head = () => {
                         
                         />
             </div>
-            <div>Dich Vu</div>
-            <div>
-                
-            </div>
+            <div className="w-screen h-16 leading-16 text-center border">Dich Vu</div>
+           
 
 
 

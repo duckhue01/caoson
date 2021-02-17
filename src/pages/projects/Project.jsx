@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import {AppContext} from '../../App'
 
 // templates 
 import ProTemp from "../../templates/projects/ProTemp";
@@ -31,13 +33,22 @@ import proj16 from "../../assets/images/projects/proj16.jpg";
 const projSet1 = [proj01, proj02, proj03, proj04, proj05, proj16]
 const projSet2 = [proj06, proj07, proj08, proj09, proj10, proj11, proj12]
 const projSet3 = [proj13, proj14, proj15]
+
+
+
+
 function Project() {
+
+    const  {isMenuOpen, menuHandle} = useContext(AppContext)
+    const homeStyle = isMenuOpen ? "h-screen overflow-y-hidden" : ""    
+
+
     return (
-        <div>
+        <div className={homeStyle}>
             <Head/>
-            <ProTemp src={projSet1}/>
-            <ProTemp src={projSet2}/>
-            <ProTemp src={projSet3}/>
+            <ProTemp src={projSet1} tit="du an cua chugn toi" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."/>
+            <ProTemp src={projSet2} tit="du an cua chugn toi" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."/>
+            <ProTemp src={projSet3} tit="du an cua chugn toi" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."/>
             <Footer/>
             
         </div>

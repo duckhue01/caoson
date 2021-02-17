@@ -1,4 +1,4 @@
-import React, { useState}from 'react'
+import React, { useContext } from 'react'
 
 // components 
 import  Button  from "../../components/Button";
@@ -10,20 +10,19 @@ import Menu from "../Menu";
 // icons
 import { BiMenu } from "react-icons/bi";
 
-const Head = () => {
 
-    const [isOpen, setIsOpen] = useState(false)
+// context 
+import { AppContext } from "../../App";
 
-    const menuHandle = () => {
-        setIsOpen(!isOpen)
-       
-    }
-    return (
+const Head  = () => {
+    const {isMenuOpen, menuHandle} = useContext(AppContext)
+
+    return(
         <div>
-            {isOpen ? <Menu/> : null}
-            <Button name="Call Now" className="border-b w-screen border-white bg-black text-white"/>
-            <div className="w-screen  bg-black flex justify-between ">
-                        <Branch branch="Cao Son" className="p-4 text-white"/>
+            {isMenuOpen ? <Menu menuHandle={menuHandle}/> : null}
+            <Button name="Call Now" className="border-b w-screen border-white bg-extend01 text-white tracking-wider font-semibold text-lg"/>
+            <div className="w-screen  bg-extend01 flex justify-between ">
+                        <Branch branch="Cao Son" className="p-4 text-white  tracking-wider font-semibold text-lg"/>
                         <BiMenu 
                             size={30} 
                             className="m-3 text-white z-20"
@@ -31,11 +30,8 @@ const Head = () => {
                         
                         />
             </div>
-            <div className="w-screen h-16 leading-16 text-center border">Dich Vu</div>
-           
-
-
-
+            
+          
         </div>
     )
 }

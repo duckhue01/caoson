@@ -1,12 +1,14 @@
 import firebase from "firebase/app"
 import 'firebase/firestore'
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
 } from "react-router-dom";
+
+
 
 
 // pages
@@ -26,27 +28,41 @@ firebase.initializeApp({
 const db  = firebase.firestore();
 
 
+
+export const AppContext = React.createContext()
+
+
 function App() {
-  
+  const [isOpen, setIsOpen] = useState(false)
+
+  const menuHandle = () => {
+      setIsOpen(!isOpen)
+      
+  }
 
 
   return (
-   
     <div className="font-extend01">
-      <Router>        
-          <Switch>
-          <Route path="/" exact component={Home}>              
-          </Route>
-          <Route path="/service" exact component={Service}>            
-          </Route>
-          <Route path="/projects" exact component={Project}>          
-          </Route>
-          <Route path="/store" exact component={Store}>          
-          </Route>
-        </Switch>
-      </Router>                  
+      <AppContext.Provider  value={{
+        isMenuOpen: isOpen,
+        menuHandle: menuHandle
+      }} >
+        <Router>        
+            <Switch>
+            <Route path="/" exact component={Home}>              
+            </Route>
+            <Route path="/service" exact component={Service}>            
+            </Route>
+            <Route path="/projects" exact component={Project}>          
+            </Route>
+            <Route path="/store" exact component={Store}>          
+            </Route>
+          </Switch>
+        </Router>                  
+      </AppContext.Provider>
     </div>
   );
 }
 
 export default App;
+

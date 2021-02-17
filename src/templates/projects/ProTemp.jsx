@@ -1,16 +1,16 @@
 import React, {useEffect } from 'react'
 
-const ProTemp = ({src}) => {
+const ProTemp = ({src, tit, text}) => {
     return (
-        <div>
-            <div>the linh tinh project</div>
-            <div>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        <div className="bg-extend01">
+            <div className="p-5">
+                <div className="text-extend02 text-xl pb-5">{tit}</div>
+                <div className="text-white">{text} </div>
             </div>
             {
                 src.map((s, i) =>(               
                     <img src={s} key={i} 
-                        className="w-screen h-auto"
+                        className="mx-auto my-5 w-11/12 border border-extend02"
                     /> ))
             }
             

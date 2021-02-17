@@ -1,3 +1,6 @@
+import React, { useContext } from 'react'
+
+import {AppContext} from '../../App'
 
 // component 
 import { Button } from "../../components/Button";
@@ -11,13 +14,14 @@ import Project from "../../templates/home/Project";
 import Footer from "../../templates/Footer";
 
 
-
 const Home = ()=> {
 
+    const  {isMenuOpen, menuHandle} = useContext(AppContext)
     
+    const homeStyle = isMenuOpen ? "h-screen overflow-y-hidden" : ""    
     return(
         
-        <div>
+        <div className={homeStyle}>
         
             <Main/>
             <Service/>

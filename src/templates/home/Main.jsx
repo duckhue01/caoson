@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext } from "react";
+
+// Context 
+
+import {AppContext} from '../../App'
 
 
 // components 
@@ -14,17 +18,11 @@ import Menu from "../Menu";
 import { BiMenu } from "react-icons/bi";
 
 const Main  = () => {
+    const {isMenuOpen, menuHandle}= useContext(AppContext)
 
-
-    const [isOpen, setIsOpen] = useState(false)
-
-    const menuHandle = () => {
-        setIsOpen(!isOpen)
-       
-    }
     return(
         <div>
-            {isOpen ? <Menu/> : null}
+            {isMenuOpen ? <Menu menuHandle={menuHandle}/> : null}
             <Button name="Call Now" className="border-b w-screen border-white bg-extend01 text-white tracking-wider font-semibold text-lg"/>
             <div className="w-screen  bg-extend01 flex justify-between ">
                         <Branch branch="Cao Son" className="p-4 text-white  tracking-wider font-semibold text-lg"/>
@@ -44,7 +42,7 @@ const Main  = () => {
                 <CenterText 
                     text="asdasdasd" 
                     subtext="CenterText"           
-                    className="text-white z-10 w-full text-center
+                    className="text-white w-full text-center
                     px-4 top-1/3 absolute"
                 />
 

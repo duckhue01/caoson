@@ -11,24 +11,24 @@ import {
 import  Button from "../components/Button";
 
 
-export default function Menu() {
+export default function Menu({menuHandle}) {
     return(
-        <div className="bg-black h-screen w-screen flex flex-col justify-center absolute z-10">
+        <div className="bg-black h-screen w-screen flex flex-col justify-center absolute z-10 opacity-90">
             
-            <Link to='/'>
-                <Button name="HOME" color="white" className="ml-auto mr-auto text-white"/> 
+            <Link to='/' >
+                <Button name="HOME" color="white" className="ml-auto mr-auto text-white" menuHandle={menuHandle}/> 
             </Link>
             <Link to='/service'>
-                <Button name="SERVICE" className="ml-auto mr-auto text-white"/> 
+                <Button name="SERVICE" className="ml-auto mr-auto text-white " menuHandle={menuHandle}/> 
             </Link>
             <Link to='projects'>
-                <Button name="PROJECTS" className="ml-auto mr-auto text-white" /> 
+                <Button name="PROJECTS" className="ml-auto mr-auto text-white " menuHandle={menuHandle}/> 
             </Link>                
             <Link to='store'>
-                <Button name="STORE" className="ml-auto mr-auto text-white"/>
+                <Button name="STORE" className="ml-auto mr-auto text-white " menuHandle={menuHandle}/>
             </Link>
             <Link >
-                <Button name="CONTACT" className="ml-auto mr-auto text-white"/>  
+                <Button name="CONTACT" className="ml-auto mr-auto text-white" menuHandle={menuHandle}/>  
             </Link>    
                               
             <div className="flex ml-auto mr-auto mt-10 justify-between w-32">

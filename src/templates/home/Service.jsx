@@ -12,44 +12,56 @@ const Service = ({className}) => {
     return(
         <div className={classNames(
             className,
-            " text-white bg-extend01"
+            " text-white bg-extend01 md:col-start-2 md:col-span-10 md:mt-20 md:box-border"
         )}>
-            <div className="">
-                <div className="p-10">
-                    <h2 className="text-3xl " > Dich Vu</h2>
-                    <ul className="leading-10 pl-10 my-4 list-disc  text-lg">
+            
+            <div className="md:flex md:flex-row  md:w-full ">
+                <div className="p-10 md:w-1/2 md:py-32 md:pl-10 md:border-extend02 md:border-t md:border-b md:border-l ">
+                    <h2 className="text-3xl md:text-5xl md:font-bold" > Dich Vu</h2>
+                    <ul className="leading-10 pl-10 my-4 list-disc  text-lg md:text-lg md:leading-10 ">
                         <li>complete remodeling</li>
                         <li>kitchen remodeling</li>
                         <li>bathroom remodeling</li>
                         <li>home interior</li>
 
                     </ul>
-                    <Button name="MORE INFOR" className="w-40 text-extend01 bg-extend02"/>
+                    <Button name="MORE INFOR" className="w-40 text-extend01 bg-extend02 md:w-56 md:h-14 md:leading-14 md:text-lg hover:bg-extend01 hover:text-extend02 hover:border hover:border-extend02"/>
                 </div>
 
-                <img src={serImg} className="w-screen h-auto border-t"/>
-                <div className="w-screen flex h-32 my-10 border-b border-extend02">
-                    <div className="w-1/2 text-center  ">
-                        <HomeIcon className="w-12 m-auto"/>
-                        <p className="p-5">Vast Experience</p>
+                <img src={serImg} className="w-full h-auto border md:w-1/2 md:border-l md:border-extend02 md:object-cover" alt=""/>
+            </div>
+            <div className="md:flex md:h-64 md:w-full">
+                <div className="w-full flex h-32 my-10 border-b border-extend02 md:my-0 md:border-none md:h-full md:w-1/2">
+                    <div className="w-1/2 text-center md:border-l md:border-extend02 md:h-full md:flex md:flex-col md:w-1/2">
+                        <div className="md:my-auto">
+                            <HomeIcon className="w-12 m-auto"/>
+                            <p className="pt-5">Vast Experience</p>
+                        </div>
                     </div>
-                    <div className="w-1/2 text-center"> 
-                        <FinishIcon className="w-12 m-auto"/>
-                        <p className="p-5">Vast Experience</p>
+                    <div className="w-1/2 text-center  md:h-full md:border-l md:border-extend02 md:flex md:flex-col md:w-1/2">
+                        <div className="md:my-auto">
+                            <TeamIcon className="w-12 m-auto"/>
+                            <p className="pt-5">Vast Experience</p>
+                        </div>
                     </div>
                 </div>
-                <div className=" w-screen flex h-32 border-b border-extend02">
-                    <div className="w-1/2 text-center">
-                        <HighIcon className="w-12 m-auto"/>
-                        <p className="p-5">Vast Experience</p>
+                <div className=" w-full flex h-32 border-b border-extend02 md:my-0 md:border-none md:h-full md:w-1/2  ">
+                    <div className="w-1/2 text-center  md:h-full md:border-l md:border-extend02 md:flex md:flex-col md:w-1/2">
+                        <div className="md:my-auto">
+                            <HighIcon className="w-12 m-auto"/>
+                            <p className="pt-5">Vast Experience</p>
+                        </div>
                     </div>
-                    <div className="w-1/2 text-center">
-                        <TeamIcon className="w-12 m-auto"/>
-                        <p className="p-5">Vast Experience</p>
+                    <div className="w-1/2 text-center  md:h-full md:border-l md:border-r md:border-extend02 md:flex md:flex-col md:w-1/2">
+                        <div className="md:my-auto">
+                            <FinishIcon className="w-12 m-auto"/>
+                            <p className="pt-5">Vast Experience</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        
     )
 }
 

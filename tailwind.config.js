@@ -86,7 +86,8 @@ module.exports = {
       'gradient-to-bl': 'linear-gradient(to bottom left, var(--tw-gradient-stops))',
       'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
       'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
-      'bg-main': 'url(assets/images/bg-main.jpg)',
+      'small-main': 'url(assets/images/bg-main.jpg)',
+      'big-main': 'url(assets/images/big-main.webp)',
     },
     backgroundOpacity: (theme) => theme('opacity'),
     backgroundPosition: {
@@ -759,7 +760,7 @@ module.exports = {
     borderOpacity: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
     borderRadius: ['responsive'],
     borderStyle: ['responsive'],
-    borderWidth: ['responsive'],
+    borderWidth: ['responsive', 'hover'],
     boxShadow: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus'],
     boxSizing: ['responsive'],
     clear: ['responsive'],

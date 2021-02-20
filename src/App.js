@@ -1,6 +1,6 @@
 import firebase from "firebase/app"
 import 'firebase/firestore'
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,15 +34,21 @@ export const AppContext = React.createContext()
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
-
+ 
   const menuHandle = () => {
       setIsOpen(!isOpen)
       
   }
+  
+
+  
+ 
+   
+  
 
 
   return (
-    <div className="font-extend01">
+    <div className="font-extend01" onresize>
       <AppContext.Provider  value={{
         isMenuOpen: isOpen,
         menuHandle: menuHandle

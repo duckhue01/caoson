@@ -4,8 +4,8 @@ import { AiOutlineHeart } from "react-icons/ai";
 
 function Footer() {
     return (
-        <div className=" bg-extend01 text-center border-t border-extend02 relative bottom-0">
-            <div className="p-10 border text-extend02 font-extend01 pb-20">
+        <div className="w-full bg-extend01 text-center border-t border-extend02 relative bottom-0 md:col-start-2 md:col-span-10 ">
+            <div className="p-10  text-extend02 font-extend01 pb-20">
                 <div className="text-3xl py-4">Lien He Chung Toi</div>
                 <div>
                     <HomeIcon className="mx-auto mt-5 mb-3"/>
@@ -29,7 +29,7 @@ function Footer() {
                     
 
             </div>
-            <div className=" border boder-extend02 w-screen h-10  bottom-0 text-extend02 font-extend01 text-lg ">
+            <div className=" border border-extend02 w-full h-10  bottom-0 text-extend02 font-extend01 text-lg md:w-full ">
                     
                 <p
                     className="flex left-1/2  w-72 relative transform -translate-x-1/2 tracking-wide"

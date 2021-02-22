@@ -2,40 +2,25 @@ import React, { useContext } from 'react'
 
 import {AppContext} from '../../App'
 // templates
-import  Head  from "../../templates/service/Head";
-import  SerTemp  from "../../templates/service/SerTemp";
+import  Head  from "../../templates/Head";
+import  SerTable  from "../../templates/service/SerTable";
 
 
-// images 
-import ser03 from '../../assets/images/service/ser03.jpg'
-import ser04 from '../../assets/images/service/ser04.jpg'
+
 import Footer from '../../templates/Footer'
 function Service() {
-    const  {isMenuOpen, menuHandle} = useContext(AppContext)
+    const  {isMenuOpen} = useContext(AppContext)
     const homeStyle = isMenuOpen ? "h-screen overflow-y-hidden" : ""    
     return (
-        <div className={homeStyle}>
-            <Head/>
-            <SerTemp    
-                src={ser04} 
-                tit="Complete Remodeling" 
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I"
+        <div className={homeStyle + "grid grid-cols-1  md:grid md:grid-cols-12 md:gap-0 bg-extend01 md:w-c"}>
+            <Head 
+                className="  col-span-1 md:col-start-1 md:col-span-12 md:relative"
             />
-            <SerTemp    
-                src={ser03} 
-                tit="Complete Remodeling" 
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I"
+            <SerTable
+                className="col-span-1 md:col-start-1 md:col-span-12 mt-20 md:mt-40"
             />
-            <SerTemp    
-                src={ser04} 
-                tit="Complete Remodeling" 
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I"
-            />
-            <SerTemp    
-                src={ser03} 
-                tit="Complete Remodeling" 
-                text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. I"
-            />
+            
+                
             <Footer/>
         </div>
     )

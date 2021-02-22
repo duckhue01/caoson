@@ -9,7 +9,7 @@ import {AppContext} from '../App'
 const Navbar = () => {
     const { menuHandle}= useContext(AppContext)
     return (
-        <div className="flex flex-row justify-between absolute z-10  w-6/12 right-32  p-3 m-3 text-lg font-semibold">
+        <div className="flex flex-row justify-between absolute z-10  w-6/12 right-32  p-3 m-10 text-lg font-semibold">
             <Link to='/' >
                     <Button name="HOME" color="white" className="ml-auto mr-auto text-white" /> 
                 </Link>

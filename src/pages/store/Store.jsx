@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from "../../templates/store/Head";
+import Head from "../../templates/Head";
 
 function Store() {
     return (
